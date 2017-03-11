@@ -1,0 +1,31 @@
+SFWR ENG 2XB3
+Phillip Pavlich
+001414960
+The work that I have submitted is my own individual work. -March 29th, 2016
+
+I did use a couple classes from our algorithms textbook including: Dijkstra.java, BagImplementation.java, Edge.java, EdgeWeightedGraph.java and
+IndexMinPriorityQueue.java. I made a few changes to each of them so that they corresponded with our specific task. These classes were used to implement 
+a Dijkstra searching algorithm to find the shortest path. 
+
+Design Assumptions:
+
+***In line 33 of connectedCities.txt, portland has no space between "Portland" and the states that it is a part of in 
+brackets. This is different from the format of all other lines in the data set. I have added in a space to account for this.
+
+***In the zips1990.csv file, the longitudes and latitudes are reversed and the longitudes are supposed to have a negative
+sign to match the longtiude and latitude values in the restaurant data sets. I checked the coordinates online to check that
+the longitude and latitude values in the zips file were mixed up. 
+		
+*** I am making the assumption that the longitude and latitude used for a city that is considered to be in multiple states
+is the first set of values found when looking through the zips file.
+
+***I made the assumption that if the city is not found in the zips file, then it takes the data for the first occurance of
+the city located anywhere in the name. ex:(Pittsburgh is not in the zips file but East Pittsburgh is).
+	
+***I made the assumption that to pay for gas, you take the average gas price of the state or multiple states for the city 
+that you are traveling to, and the state or multiple states for the city that you came from for a total average.
+
+*** Both New York City and St. Louis are spelt differently in the zips dataset so they were altered them to get proper longitude
+and latitude values 
+
+***I made the assumption that we can only stop in the cities provided in connectedcities.txt

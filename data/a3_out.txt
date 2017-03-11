@@ -1,0 +1,11 @@
+BFS: Washington, Pittsburgh, Columbus, Chicago
+DFS: Washington, Pittsburgh, Columbus, Chicago
+
+City         Meal Choice                          Cost of Meal   Cost of Fuel   Total
+
+Washington   -                                    -              -              -
+Pittsburgh   McChicken - Meal                     $3.79          $15.78         $19.57
+Columbus     Double Cheeseburger - Meal           $4.38          $15.43         $19.81
+Chicago      Quarter Pounder with Cheese - Meal   $5.49          $25.43         $30.92
+                                                  ------         --------       --------
+                                                  $13.66         $56.64         $70.3

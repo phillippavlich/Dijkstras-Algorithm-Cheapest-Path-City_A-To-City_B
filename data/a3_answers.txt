@@ -1,0 +1,43 @@
+Phillip Pavlich
+001414960
+pavlicpm
+
+These are My answers to 3.1, 3.2, 3.4
+
+3.1) The type of graph that I used when implementing this algorithm is a weighted graph.
+A weighted graph means that each edge has a certain weight to it. The weights are represented
+by the price to go from one city to another. The graph represents all of the United states. The graph is undirected.
+Each node in the graph is a representation of a city that you are permitted to travel to during your trip.
+Each city, has many methods that allow it to retrieve data. Some of the data it stores includes:
+it's city name, the states that it belongs to, it's longitude, it's latitude and all city that it can 
+directly travel to. The array list that has all cities that one city can travel to is what connects all
+the nodes together to create a graph. The edges represent the connections between each node/city. To solve
+the problems below we can use BFS and DFS to search through an array containing all 32 cities. This provides us
+with a possible path(the first path found that connects the starting city and ending city). We can also use 
+Dijkstra's shortest path algorithm to find the shortest distance between a starting city and an ending city.
+Dijkstra's algorithm uses an edge weighted graph in order to find the shortest path between two cities.
+The get methods for each node are very useful in comparing which route would be the cheapest and how to travel
+between cities.
+
+3.2) BFS and DFS do not return the same path. BFS searches all the children of a parent and then proceed to
+the next layer. DFS searches as deep as possible until there is a dead end and then backtracks. They both are 
+searching for a path from the starting city to the ending city. They both return the first path that they find. 
+A BFS searching method finds the answer is fewer steps due to the depth of traveling through potentially 32 cities.
+BFS allows the user to broaden their search and find a path using less steps. If the number of cities increases,
+BFS would still on average find a path in fewer steps because DFS always searches until the end of the tree and then
+tries to backtrack. That takes many more steps to find an answer than BFS. BFS tries to find shorter paths first and 
+then keep extending if it is unable to find a path. It will keep extending into long paths if necessary.
+
+3.4) In order to find the shortest path between two cities, I chose to implement Dijkstra's algorithm. To implement his
+algorithm, I used some modified classes from the textbook such as Dijkstra.java, BagImplementation.java, Edge.java, 
+EdgeWeightedGraph.java and IndexMinPriorityQueue.java. These classes are used in order to find the shortest path in our 
+graph of city nodes. In order to find the shortest path, it was necessary to make an edge weighted graph using edges and 
+bags as an API to making this graph with prices between cities as the weights for each edge. Dijkstra's algorithm runs in
+O(E*log(V)) where E is the number of edges and V is the number of vertices. Each time that the loop executes, one vertex is
+removed from the queue (complexity O(V)). Each pop operation takes O(log(V)) complexity due to the implementation of priority
+queues. That makes the complexity O(V*logV). The edges must also be considered which involves O(E) that still needs to increase 
+the priority queue (O(logV)). Together that makes a complexity of O(E*logV) which is a bigger complexity than VlogV. That is why
+the complexity of Dijkstra's algorithm is ElogV. The complexity will remain the same if the number of cities increases, if the number 
+of stops increases or the number of restaurants increases. The complexity is still determined through the edges that are possible to be
+explored and the increase in size of the priority queue. Increasing those variables may increase the runtime but it will not change
+the complexity of the algorithm to find the shortest path. That is why dijkstra's algorithm can guarantee a complexity of E*log(V).
